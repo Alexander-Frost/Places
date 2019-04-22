@@ -86,22 +86,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4I-Nf-Nh1">
-                                <rect key="frame" x="87" y="218" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4I-Nf-Nh1" userLabel="MapView Contrainer">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <connections>
                                     <segue destination="WDe-Np-ILy" kind="embed" id="ROX-fN-9qs"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wh-EX-9Do">
-                                <rect key="frame" x="87" y="444" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wh-EX-9Do" userLabel="PlacesTable Container">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
                                 <connections>
                                     <segue destination="n5Y-wi-IyX" kind="embed" id="IJo-Me-6sy"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4wh-EX-9Do" firstAttribute="leading" secondItem="wRE-uE-RFN" secondAttribute="leading" id="Nmr-ah-QdG"/>
+                            <constraint firstItem="4wh-EX-9Do" firstAttribute="trailing" secondItem="wRE-uE-RFN" secondAttribute="trailing" id="POK-df-DIV"/>
+                            <constraint firstItem="a4I-Nf-Nh1" firstAttribute="leading" secondItem="wRE-uE-RFN" secondAttribute="leading" id="Pcy-vd-T0B"/>
+                            <constraint firstAttribute="bottom" secondItem="4wh-EX-9Do" secondAttribute="bottom" id="S02-eO-YgT"/>
+                            <constraint firstItem="4wh-EX-9Do" firstAttribute="top" secondItem="a4I-Nf-Nh1" secondAttribute="bottom" id="Y0N-RK-Gaz"/>
+                            <constraint firstItem="a4I-Nf-Nh1" firstAttribute="top" secondItem="vfw-X8-WFN" secondAttribute="top" id="azd-3D-wQn"/>
+                            <constraint firstItem="4wh-EX-9Do" firstAttribute="height" secondItem="a4I-Nf-Nh1" secondAttribute="height" id="d5n-m7-8hd"/>
+                            <constraint firstItem="a4I-Nf-Nh1" firstAttribute="trailing" secondItem="wRE-uE-RFN" secondAttribute="trailing" id="pmW-gS-AZe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wRE-uE-RFN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Locations" image="Globe" id="171-PD-hDm"/>
