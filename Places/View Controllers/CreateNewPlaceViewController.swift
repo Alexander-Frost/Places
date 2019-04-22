@@ -9,7 +9,29 @@
 import Foundation
 import UIKit
 
-class CreateNewPlaceViewController: UIViewController {
+class CreateNewPlaceViewController: UIViewController, PlacesPresenter {
+    var placeController: PlaceController?
+    
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
+    
+    
+    @IBAction func saveBtnPressed(_ sender: UIButton) {
+        print("Saved")
+        
+        guard let name = locationTextField.text,
+            let latitudeString = latitudeTextField.text,
+            let latitude = Double(latitudeString),
+            let longitudeString = longitudeTextField.text,
+            let longitude = Double(longitudeString)
+        else { return }
+        
+        
+        placeController?.createPlace(with: name, latitude: latitude, longitude: longitude)
+        
+        
+    }
     
     
     override func viewDidLoad() {

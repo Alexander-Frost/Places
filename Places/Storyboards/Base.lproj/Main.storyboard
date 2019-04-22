@@ -13,13 +13,13 @@
         <!--Add Place-->
         <scene sceneID="Pdy-bT-QSO">
             <objects>
-                <viewController id="xtK-UL-WSc" sceneMemberID="viewController">
+                <viewController id="xtK-UL-WSc" customClass="CreateNewPlaceViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mA-Cm-xGo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-yh-uf7">
-                                <rect key="frame" x="20" y="324" width="374" height="30"/>
+                                <rect key="frame" x="20" y="345" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="RvG-iq-a57"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="Uow-Vm-rAG"/>
@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOO-8e-q0S">
-                                <rect key="frame" x="20" y="266" width="374" height="30"/>
+                                <rect key="frame" x="20" y="287" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="J9F-me-tdx"/>
                                     <constraint firstAttribute="height" constant="30" id="WXw-YA-cx4"/>
@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Wr-buT">
-                                <rect key="frame" x="20" y="384" width="374" height="30"/>
+                                <rect key="frame" x="20" y="405" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8Yb-r9-yJz"/>
                                     <constraint firstAttribute="width" constant="374" id="xsE-5t-siF"/>
@@ -51,36 +51,36 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKb-1N-VCJ">
-                                <rect key="frame" x="158" y="443" width="98" height="51"/>
+                                <rect key="frame" x="157" y="443" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="ARI-oT-ExB"/>
-                                    <constraint firstAttribute="height" constant="51" id="dBu-SX-n8O"/>
-                                    <constraint firstAttribute="width" constant="99" id="owA-my-4mp"/>
+                                    <constraint firstAttribute="width" constant="100" id="Vkp-OY-A07"/>
                                 </constraints>
                                 <state key="normal" title="Save Place"/>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="xtK-UL-WSc" eventType="touchUpInside" id="jC9-WU-mnF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="centerX" secondItem="8mA-Cm-xGo" secondAttribute="centerX" id="5Rh-OW-KXR"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="leading" secondItem="Xaj-tB-Hht" secondAttribute="leading" constant="158" id="8j1-cP-ieA"/>
+                            <constraint firstItem="fOO-8e-q0S" firstAttribute="top" secondItem="Xaj-tB-Hht" secondAttribute="top" constant="243" id="9d5-PJ-Gw7"/>
                             <constraint firstItem="fOO-8e-q0S" firstAttribute="leading" secondItem="Xaj-tB-Hht" secondAttribute="leading" constant="20" id="H54-xz-iW7"/>
                             <constraint firstItem="dzV-Wr-buT" firstAttribute="top" secondItem="ahC-yh-uf7" secondAttribute="bottom" constant="30" id="KHs-zV-cd7"/>
+                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="centerX" secondItem="Xaj-tB-Hht" secondAttribute="centerX" id="Phj-4N-pqw"/>
                             <constraint firstItem="ahC-yh-uf7" firstAttribute="leading" secondItem="Xaj-tB-Hht" secondAttribute="leading" constant="20" id="RKA-0W-f4A"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="leading" secondItem="Xaj-tB-Hht" secondAttribute="leading" constant="158" id="Rbv-8X-jIE"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="centerX" secondItem="fOO-8e-q0S" secondAttribute="centerX" id="ZxC-Or-UDK"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="centerX" secondItem="dzV-Wr-buT" secondAttribute="centerX" id="e4Y-4X-03P"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="centerX" secondItem="ahC-yh-uf7" secondAttribute="centerX" id="ej6-9H-T6G"/>
+                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="top" secondItem="dzV-Wr-buT" secondAttribute="bottom" constant="8" id="ZAY-lX-pgD"/>
                             <constraint firstItem="dzV-Wr-buT" firstAttribute="leading" secondItem="Xaj-tB-Hht" secondAttribute="leading" constant="20" id="hHk-hX-VDp"/>
-                            <constraint firstItem="Xaj-tB-Hht" firstAttribute="bottom" secondItem="YKb-1N-VCJ" secondAttribute="bottom" constant="253" id="lO1-tz-NWA"/>
                             <constraint firstItem="ahC-yh-uf7" firstAttribute="top" secondItem="fOO-8e-q0S" secondAttribute="bottom" constant="28" id="oAs-27-vUe"/>
                             <constraint firstItem="dzV-Wr-buT" firstAttribute="top" secondItem="ahC-yh-uf7" secondAttribute="bottom" constant="30" id="oX7-EX-olV"/>
-                            <constraint firstItem="YKb-1N-VCJ" firstAttribute="top" secondItem="dzV-Wr-buT" secondAttribute="bottom" constant="29" id="oon-Ud-SFT"/>
-                            <constraint firstItem="Xaj-tB-Hht" firstAttribute="bottom" secondItem="YKb-1N-VCJ" secondAttribute="bottom" constant="319" id="zNF-qh-797"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xaj-tB-Hht"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Place" image="Plus" id="br8-lZ-wzH"/>
+                    <connections>
+                        <outlet property="latitudeTextField" destination="ahC-yh-uf7" id="elE-K7-uOq"/>
+                        <outlet property="locationTextField" destination="fOO-8e-q0S" id="smm-Kh-6RR"/>
+                        <outlet property="longitudeTextField" destination="dzV-Wr-buT" id="NNt-kb-Idd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE4-VZ-kon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +89,7 @@
         <!--Locations-->
         <scene sceneID="t0F-nv-VV7">
             <objects>
-                <viewController id="b3z-ZM-51h" sceneMemberID="viewController">
+                <viewController id="b3z-ZM-51h" customClass="VisitedPlacesViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vfw-X8-WFN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,13 +97,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4I-Nf-Nh1" userLabel="MapView Contrainer">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <connections>
-                                    <segue destination="WDe-Np-ILy" kind="embed" id="ROX-fN-9qs"/>
+                                    <segue destination="WDe-Np-ILy" kind="embed" identifier="MapView" id="ROX-fN-9qs"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wh-EX-9Do" userLabel="PlacesTable Container">
                                 <rect key="frame" x="0.0" y="448" width="414" height="448"/>
                                 <connections>
-                                    <segue destination="n5Y-wi-IyX" kind="embed" id="IJo-Me-6sy"/>
+                                    <segue destination="n5Y-wi-IyX" kind="embed" identifier="PlacesTable" id="IJo-Me-6sy"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqx-4c-7HK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5652173913045" y="790.17857142857144"/>
+            <point key="canvasLocation" x="1070" y="731"/>
         </scene>
         <!--MapView-->
         <scene sceneID="s7O-nO-2Jd">
@@ -142,12 +142,13 @@
             </objects>
             <point key="canvasLocation" x="1657" y="912"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Places Tab Bar View Controller-->
         <scene sceneID="quN-sM-SGB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZWd-Y3-m9B" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZWd-Y3-m9B" customClass="PlacesTabBarViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lgi-IF-6WO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -158,7 +159,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zt5-0A-wfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159.42028985507247" y="77.678571428571431"/>
+            <point key="canvasLocation" x="242" y="289"/>
         </scene>
     </scenes>
     <resources>
