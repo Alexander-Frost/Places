@@ -23,7 +23,6 @@ class PlacesTabBarViewController: UITabBarController {
             if let childViewController = childViewController as? PlacesPresenter{
                 childViewController.placeController = placeController
             }
-            
         }
     }
 
